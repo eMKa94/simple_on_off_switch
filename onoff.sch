@@ -1,0 +1,269 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Device:Q_PMOS_GSD Q?
+U 1 1 61AC3384
+P 7100 3500
+F 0 "Q?" V 7448 3500 50  0000 C CNB
+F 1 "Q_PMOS_GSD" V 7353 3500 50  0000 C CNB
+F 2 "" H 7300 3600 50  0001 C CNN
+F 3 "~" H 7100 3500 50  0001 C CNN
+	1    7100 3500
+	0    1    -1   0   
+$EndComp
+Text HLabel 3450 3400 0    50   Input ~ 10
+Power_input
+$Comp
+L Device:R R?
+U 1 1 61AC5504
+P 6000 4350
+F 0 "R?" V 6100 4350 50  0000 C CNB
+F 1 "22K" V 6000 4350 39  0000 C CNB
+F 2 "" V 5930 4350 50  0001 C CNN
+F 3 "~" H 6000 4350 50  0001 C CNN
+	1    6000 4350
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	6550 3550 6550 3400
+Connection ~ 6550 3400
+Wire Wire Line
+	6550 3400 6900 3400
+Wire Wire Line
+	6550 3850 6550 3950
+Wire Wire Line
+	6550 3950 7100 3950
+Wire Wire Line
+	7100 3950 7100 3700
+$Comp
+L Device:Q_NPN_BCE Q?
+U 1 1 61AC7337
+P 7000 4350
+F 0 "Q?" H 7191 4398 50  0000 L CNB
+F 1 "Q_NPN_BCE" H 7191 4303 50  0000 L CNB
+F 2 "" H 7200 4450 50  0001 C CNN
+F 3 "~" H 7000 4350 50  0001 C CNN
+	1    7000 4350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7100 4150 7100 3950
+Connection ~ 7100 3950
+Wire Wire Line
+	7100 4550 7100 4900
+$Comp
+L power:GND #PWR?
+U 1 1 61AC8378
+P 7100 4900
+F 0 "#PWR?" H 7100 4650 50  0001 C CNN
+F 1 "GND" H 7105 4724 50  0000 C CNN
+F 2 "" H 7100 4900 50  0001 C CNN
+F 3 "" H 7100 4900 50  0001 C CNN
+	1    7100 4900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 61ACA1F0
+P 6550 3700
+F 0 "R?" H 6600 3700 50  0000 L CNB
+F 1 "22K" V 6550 3700 39  0000 C CNB
+F 2 "" V 6480 3700 50  0001 C CNN
+F 3 "~" H 6550 3700 50  0001 C CNN
+	1    6550 3700
+	-1   0    0    1   
+$EndComp
+Connection ~ 5750 3400
+Wire Wire Line
+	5750 3400 6550 3400
+$Comp
+L Switch:SW_Push SW?
+U 1 1 61AD33F8
+P 5750 3900
+F 0 "SW?" V 5798 3850 50  0000 R CNB
+F 1 "Wake up" V 5703 3850 50  0000 R CNB
+F 2 "" H 5750 4100 50  0001 C CNN
+F 3 "~" H 5750 4100 50  0001 C CNN
+	1    5750 3900
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	5750 4100 5750 4350
+$Comp
+L eMKa_library:LOGO_mid #G?
+U 1 1 61ADDA2F
+P 1250 1200
+F 0 "#G?" H 1250 476 60  0001 C CNN
+F 1 "LOGO_mid" H 1250 1924 60  0001 C CNN
+F 2 "" H 1250 1200 50  0001 C CNN
+F 3 "" H 1250 1200 50  0001 C CNN
+	1    1250 1200
+	1    0    0    -1  
+$EndComp
+Text Notes 3850 1250 0    197  ~ 39
+Simple ON / OFF switch
+$Comp
+L Device:Q_PMOS_GSD Q?
+U 1 1 61AEEAF2
+P 4800 3850
+F 0 "Q?" H 5005 3802 50  0000 L CNB
+F 1 "Q_PMOS_GSD" H 5005 3897 50  0000 L CNB
+F 2 "" H 5000 3950 50  0001 C CNN
+F 3 "~" H 4800 3850 50  0001 C CNN
+	1    4800 3850
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	3450 3400 4900 3400
+Wire Wire Line
+	4900 4050 4900 4350
+Wire Wire Line
+	4900 4350 5750 4350
+$Comp
+L Device:Q_NPN_BCE Q?
+U 1 1 61AF7587
+P 4350 4500
+F 0 "Q?" H 4541 4548 50  0000 L CNB
+F 1 "Q_NPN_BCE" H 4541 4453 50  0000 L CNB
+F 2 "" H 4550 4600 50  0001 C CNN
+F 3 "~" H 4350 4500 50  0001 C CNN
+	1    4350 4500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4450 4300 4450 3850
+Wire Wire Line
+	4450 3850 4600 3850
+Wire Wire Line
+	4900 3400 4900 3650
+Wire Wire Line
+	5750 3400 5750 3700
+Connection ~ 4900 3400
+Wire Wire Line
+	4900 3400 5750 3400
+Wire Wire Line
+	5850 4350 5750 4350
+Connection ~ 5750 4350
+$Comp
+L Device:D D?
+U 1 1 61B05F1D
+P 6400 4350
+F 0 "D?" H 6400 4250 50  0000 C CNB
+F 1 "D" H 6400 4450 50  0000 C CNB
+F 2 "" H 6400 4350 50  0001 C CNN
+F 3 "~" H 6400 4350 50  0001 C CNN
+	1    6400 4350
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	6250 4350 6150 4350
+Wire Wire Line
+	6550 4350 6700 4350
+$Comp
+L power:GND #PWR?
+U 1 1 61B081FC
+P 4450 4900
+F 0 "#PWR?" H 4450 4650 50  0001 C CNN
+F 1 "GND" H 4455 4724 50  0000 C CNN
+F 2 "" H 4450 4900 50  0001 C CNN
+F 3 "" H 4450 4900 50  0001 C CNN
+	1    4450 4900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4450 4900 4450 4700
+$Comp
+L Device:R R?
+U 1 1 61B08F1A
+P 3900 4500
+F 0 "R?" V 4000 4500 50  0000 C CNB
+F 1 "22K" V 3900 4500 39  0000 C CNB
+F 2 "" V 3830 4500 50  0001 C CNN
+F 3 "~" H 3900 4500 50  0001 C CNN
+	1    3900 4500
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	4050 4500 4150 4500
+Text HLabel 3450 4500 0    50   Input ~ 10
+External_wake_up
+Wire Wire Line
+	3450 4500 3750 4500
+$Comp
+L Device:D D?
+U 1 1 61B119FB
+P 7600 4050
+F 0 "D?" H 7600 3950 50  0000 C CNB
+F 1 "D" H 7600 4150 50  0000 C CNB
+F 2 "" H 7600 4050 50  0001 C CNN
+F 3 "~" H 7600 4050 50  0001 C CNN
+	1    7600 4050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7450 4050 6700 4050
+Wire Wire Line
+	6700 4050 6700 4350
+Connection ~ 6700 4350
+Wire Wire Line
+	6700 4350 6800 4350
+$Comp
+L Device:R R?
+U 1 1 61B12D9E
+P 8000 3700
+F 0 "R?" H 8050 3700 50  0000 L CNB
+F 1 "22K" V 8000 3700 39  0000 C CNB
+F 2 "" V 7930 3700 50  0001 C CNN
+F 3 "~" H 8000 3700 50  0001 C CNN
+	1    8000 3700
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	8000 3550 8000 3400
+Wire Wire Line
+	8000 3400 7300 3400
+Wire Wire Line
+	7750 4050 8000 4050
+Wire Wire Line
+	8000 4050 8000 3850
+$Comp
+L Switch:SW_Push SW?
+U 1 1 61B1480E
+P 8000 4550
+F 0 "SW?" V 8048 4500 50  0000 R CNB
+F 1 "Kill" V 7953 4500 50  0000 R CNB
+F 2 "" H 8000 4750 50  0001 C CNN
+F 3 "~" H 8000 4750 50  0001 C CNN
+	1    8000 4550
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	8000 4350 8000 4050
+Connection ~ 8000 4050
+$Comp
+L power:GND #PWR?
+U 1 1 61B1572A
+P 8000 4900
+F 0 "#PWR?" H 8000 4650 50  0001 C CNN
+F 1 "GND" H 8005 4724 50  0000 C CNN
+F 2 "" H 8000 4900 50  0001 C CNN
+F 3 "" H 8000 4900 50  0001 C CNN
+	1    8000 4900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8000 4900 8000 4750
+$EndSCHEMATC
